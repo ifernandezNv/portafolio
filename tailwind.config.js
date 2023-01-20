@@ -1,15 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{js}"],
+  content: ["./src/**/*.js"],
   theme: {
     colors: {
-      "bgNegro": '#0B111E',
+      "azul-oscuro": '#0B111E',
       "span": '#1692AA',
-      "bgAzul": '#047E96'
+      "bgAzul": '#047E96',
+      "white": '#ffffff',
+      "black": "#080C15",
     },
     fontFamily: {
-      "lato": ['Lato', 'sans-serif'],
-      "poppins": ['Poppins', 'sans-serif']
+      "sans": ['Lato', 'sans-serif'],
+      "heading": ['Poppins', 'sans-serif']
+    },
+    fontSize: {
+      "4xl": '48px',
+      "2xl": '32px',
+      "xl": '24px',
+      "label-xl": '18px',
+      "label-lg": '17px',
+      "label": '16px',
+      "lg": '20px',
+      "md": '18px',
+      "sm": '16px',
+    },
+    backdropBlur:{
+      "borroso": "-webkit-backdrop-filter: blur(6px);"
     },
     extend: {
       borderRadius: {
