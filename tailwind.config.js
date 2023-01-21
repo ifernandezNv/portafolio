@@ -25,7 +25,7 @@ module.exports = {
       "sm": '16px',
     },
     backdropBlur:{
-      "borroso": "-webkit-backdrop-filter: blur(6px);"
+      "filter": "backdrop-filter: blur(6px);"
     },
     extend: {
       borderRadius: {
