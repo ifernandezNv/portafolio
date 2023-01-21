@@ -23,7 +23,7 @@ export default function Home() {
               height={1200}
               width={1200}
               quality={100}
-              fit={true}
+              fit={"true"}
               className='w-full relative blur h-5/6'
             />
             <div className='flex flex-col items-center  justify-center absolute -top-28 z-50 w-full min-h-screen' >
