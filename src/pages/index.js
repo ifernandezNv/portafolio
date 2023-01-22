@@ -25,9 +25,13 @@ export default function Home() {
     }
   },[])
 
-  function cambiarFiltro(categoria){
-    setFiltro(categoria);
-  }
+  useEffect(()=>{
+    if(filtro !== 'todos'){
+      const proyectosFiltrados = proyectos.map(proyecto => proyecto.categoria === filtro && proyecto);
+      setProyectos(proyectosFiltrados);
+    }
+    setProyectos(proyectos);
+  },[filtro])
 
   return (
       <>
