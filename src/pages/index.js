@@ -74,7 +74,7 @@ export default function Home() {
                         </Link>
                       </div>
                       <div className='flex flex-col md:flex-row gap-12 mt-14'>
-                          <Link href='/#proyectos' className='text-center text-white shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:border-bgAzul hover:text-black transition-all' >Ver Proyectos</Link>
+                          <Link href='/#proyectos' className='text-center text-white shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:border-bgAzul hover:text-black hover:border-span hover:border-b-4 transition-all' >Ver Proyectos</Link>
                           <a href="/assets/Isaac Fernández Navarro.pdf" download className='text-black px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white transition-all'>Descargar CV</a>
                         </div>
                     </div>
@@ -85,14 +85,14 @@ export default function Home() {
                 <div>
                   <p className='font-poppins font-medium text-sm text-gris-claro'>Categorías:</p>
                   <div className='flex flex-row justify-between my-2'>
-                    <button className={` ${filtro === 'todos' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-2' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('todos') }>Todos</button>
-                    <button className={` ${filtro === 'web' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-2' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('web') }>Web</button>
-                    <button className={` ${filtro === 'movil' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-2' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('movil') }>Móvil</button>
-                    <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-2' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('design') }>Diseño</button>
+                    <button className={` ${filtro === 'todos' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('todos') }>Todos</button>
+                    <button className={` ${filtro === 'web' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('web') }>Web</button>
+                    <button className={` ${filtro === 'movil' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('movil') }>Móvil</button>
+                    <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('design') }>Diseño</button>
                   </div>
                 </div>
                 <div className='mx-4 md:mx-'>
-
+                  
                 </div>
               </main>
 
