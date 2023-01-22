@@ -9,12 +9,12 @@ function Proyecto({proyecto}) {
         <p className='text-movil-lg font-light lg:text-sm'>Stack Utilizado: </p>
         {stack.map(tecnologia => <p className='text-movil-md lg:text-sm'>{tecnologia}</p>)}
       </div>
-      <div className='flex justify-between mx-10 my-10'>
-        {repo && (
-          <button href={repo}>Ver Repositorio</button>
-        )}
+      <div className={`${ verProyecto && repo ? 'flex justify-between mx-10 my-10 gap-10' : 'flex justify-center'} my-4`}>
         {verProyecto &&(
-          <button className='bg-bgAzul text-white capitalize font-bold p-4 rounded shadow' >Ver Proyecto</button>
+          <button className='bg-bgAzul w-3/5 text-white capitalize font-bold p-4 rounded shadow' >Ver Proyecto</button>
+        )}
+        {repo && (
+          <button href={repo} className='capitalize w-3/5 font-bold p-4 rounded shadow border-span border-2'>Ver Repositorio</button>
         )}
       </div>
     </div>
