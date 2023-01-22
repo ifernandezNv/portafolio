@@ -8,11 +8,22 @@ const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [paginaLista, setPaginaLista] = useState(false);
+  const [proyectos, setProyectos] = useState
+    ([
+      {titulo: 'Áureos', stack: ['React Native', 'ReactJS', 'NodeJS', 'MongoDB', 'Figma', 'Express'], repo: 'https://github.com/ifernandezNv/Aureos-Frontend'},
+      {titulo: 'UpTask', stack: ['ReactJS', 'NodeJS', 'MongoDB', 'Express'], repo: 'https://github.com/ifernandezNv/UpTask_frontend'},
+      {titulo: 'GutiarLA', stack: ['Astro', 'PostgreSQL', 'TailwindCSS'], repo: 'https://github.com/ifernandezNv/astro-guitarla', verProyecto: 'https://astro-guitarla.vercel.app/'},
+      {titulo: 'Diseño UI de mi Portafolio', stack: ['Figma'], repo:'', verProyecto: 'https://www.figma.com/file/wXmXRgNfO5ILWfJU4HFD4n/UI---Portafolio?node-id=76%3A45&t=seCAjHwD1hFP6EbV-1'},
+      {titulo: 'ITMaps', stack: ['JavaScript', 'HTML5', 'CSS3', ], repo: 'https://github.com/ifernandezNv/itmaps', verProyecto: 'https://itmaps.netlify.app/'},
+      {titulo: 'Diseño UI de ITMaps', stack: ['Figma'], repo:'', verProyecto: 'https://www.figma.com/file/EQJ4XK0nhNEEmxBXdhspkB/ItMaps?node-id=0%3A1&t=pngmBMDjraHvizE6-1'}
+    ]);
+
   useEffect(()=>{
     if(!paginaLista){
       setPaginaLista(true);
     }
   },[])
+  
   return (
       <>
       {paginaLista ? (
