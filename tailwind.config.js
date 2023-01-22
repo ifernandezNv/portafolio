@@ -10,6 +10,7 @@ module.exports = {
       "bgAzul": '#047E96',
       "white": '#ffffff',
       "black": "#080C15",
+      "gris-claro": '#D2D6D9',
     },
     fontFamily: {
       "sans": ['Lato', 'sans-serif'],
@@ -25,6 +26,11 @@ module.exports = {
       "lg": '20px',
       "md": '18px',
       "sm": '16px',
+      "movil-4xl": '24px',
+      "movil-2xl": '20px',
+      "movil-xl": '16px',
+      "movil-lg": '14px',
+      "movil-md": '12px'
     },
     backdropBlur:{
       "filter": "backdrop-filter: blur(6px);"

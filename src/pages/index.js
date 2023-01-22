@@ -10,20 +10,25 @@ export default function Home() {
   const [paginaLista, setPaginaLista] = useState(false);
   const [proyectos, setProyectos] = useState
     ([
-      {titulo: 'Áureos', stack: ['React Native', 'ReactJS', 'NodeJS', 'MongoDB', 'Figma', 'Express'], repo: 'https://github.com/ifernandezNv/Aureos-Frontend'},
-      {titulo: 'UpTask', stack: ['ReactJS', 'NodeJS', 'MongoDB', 'Express'], repo: 'https://github.com/ifernandezNv/UpTask_frontend'},
-      {titulo: 'GutiarLA', stack: ['Astro', 'PostgreSQL', 'TailwindCSS'], repo: 'https://github.com/ifernandezNv/astro-guitarla', verProyecto: 'https://astro-guitarla.vercel.app/'},
-      {titulo: 'Diseño UI de mi Portafolio', stack: ['Figma'], repo:'', verProyecto: 'https://www.figma.com/file/wXmXRgNfO5ILWfJU4HFD4n/UI---Portafolio?node-id=76%3A45&t=seCAjHwD1hFP6EbV-1'},
+      {titulo: 'Áureos', stack: ['React Native', 'ReactJS', 'NodeJS', 'MongoDB', 'Figma', 'Express'], repo: 'https://github.com/ifernandezNv/Aureos-Frontend', categoria: 'movil'},
+      {titulo: 'UpTask', stack: ['ReactJS', 'NodeJS', 'MongoDB', 'Express'], repo: 'https://github.com/ifernandezNv/UpTask_frontend', categoria: 'web'},
+      {titulo: 'GutiarLA', stack: ['Astro', 'PostgreSQL', 'TailwindCSS'], repo: 'https://github.com/ifernandezNv/astro-guitarla', verProyecto: 'https://astro-guitarla.vercel.app/', categoria: 'web'},
+      {titulo: 'Diseño UI de mi Portafolio', stack: ['Figma'], repo:'', verProyecto: 'https://www.figma.com/file/wXmXRgNfO5ILWfJU4HFD4n/UI---Portafolio?node-id=76%3A45&t=seCAjHwD1hFP6EbV-1', categoria: 'design'},
       {titulo: 'ITMaps', stack: ['JavaScript', 'HTML5', 'CSS3', ], repo: 'https://github.com/ifernandezNv/itmaps', verProyecto: 'https://itmaps.netlify.app/'},
-      {titulo: 'Diseño UI de ITMaps', stack: ['Figma'], repo:'', verProyecto: 'https://www.figma.com/file/EQJ4XK0nhNEEmxBXdhspkB/ItMaps?node-id=0%3A1&t=pngmBMDjraHvizE6-1'}
+      {titulo: 'Diseño UI de ITMaps', stack: ['Figma'], repo:'', verProyecto: 'https://www.figma.com/file/EQJ4XK0nhNEEmxBXdhspkB/ItMaps?node-id=0%3A1&t=pngmBMDjraHvizE6-1', categoria: 'design'}
     ]);
+    const [filtro, setFiltro] = useState('todos');
 
   useEffect(()=>{
     if(!paginaLista){
       setPaginaLista(true);
     }
   },[])
-  
+
+  function cambiarFiltro(categoria){
+    setFiltro(categoria);
+  }
+
   return (
       <>
       {paginaLista ? (
@@ -71,8 +76,20 @@ export default function Home() {
                     </div>
               </header>
 
-              <main className='min-h-screen bg-azul-oscuro py-10' id='proyectos'>
-                <h2 className='text-2xl text-white font-bold text-center'>Mis Proyectos</h2>
+              <main className='min-h-screen bg-azul-oscuro py-10 px-4 md:px-40 ' id='proyectos'>
+                <h2 className='text-2xl text-gris-claro font-bold text-center'>Mis Proyectos</h2>
+                <div>
+                  <p className='font-poppins font-medium text-sm text-gris-claro'>Categorías:</p>
+                  <div className='flex flex-row justify-between my-2'>
+                    <button className={` ${filtro === 'todos' ? 'bg-span text-white font-bold' : 'text-black bg-white border-span'} py-2 px-5 rounded`} onClick={ ()=> setFiltro('todos') }>Todos</button>
+                    <button className={` ${filtro === 'web' ? 'bg-span text-white font-bold' : 'text-black bg-white border-span'} py-2 px-5 rounded`} onClick={ ()=> setFiltro('web') }>Web</button>
+                    <button className={` ${filtro === 'movil' ? 'bg-span text-white font-bold' : 'text-black bg-white border-span'} py-2 px-5 rounded`} onClick={ ()=> setFiltro('movil') }>Móvil</button>
+                    <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold' : 'text-black bg-white border-span'} py-2 px-5 rounded`} onClick={ ()=> setFiltro('design') }>Diseño</button>
+                  </div>
+                </div>
+                <div className='mx-4 md:mx-'>
+
+                </div>
               </main>
 
             </body>
