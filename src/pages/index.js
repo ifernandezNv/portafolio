@@ -27,7 +27,7 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <body>
-              <header className={`min-h-screen md:h-5/6 bg-azul-oscuro relative overflow-y-hidden scroll-smooth`}>
+              <header className={`min-h-screen lg:h-1/2 bg-azul-oscuro relative`}>
                     <Image 
                       src={'/assets/bgHeader.png'}
                       alt='Imagen bg-header'
@@ -35,7 +35,7 @@ export default function Home() {
                       width={1200}
                       quality={100}
                       // cover={"true"}
-                      className='w-full relative blur'
+                      className='w-100 lg:min-w-full relative blur min-h-screen lg:h-1/2'
                     />
                     <div className='flex flex-col items-center justify-center absolute -top-28 z-50 w-full min-h-screen' >
                       <h1 className='text-white text-center text-4xl font-bold tracking-wider'>Hola, Soy Isaac Fernández</h1>
@@ -54,15 +54,16 @@ export default function Home() {
                         </Link>
                       </div>
                       <div className='flex flex-col md:flex-row gap-12 mt-14'>
-                          <Link href='/#proyectos' className='text-center text-white shadow font-semibold px-10 py-4 bg-bgAzul rounded' scroll={true}>Ver Proyectos</Link>
+                          <Link href='/#proyectos' className='text-center text-white shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:border-bgAzul hover:text-black transition-all' >Ver Proyectos</Link>
                           <a href="/assets/Isaac Fernández Navarro.pdf" download className='text-black px-10 py-4 font-semibold rounded bg-white'>Descargar CV</a>
                         </div>
                     </div>
-
               </header>
+
               <main className='min-h-screen bg-azul-oscuro py-10' id='proyectos'>
                 <h2 className='text-2xl text-white font-bold text-center'>Mis Proyectos</h2>
               </main>
+
             </body>
         </>
         ): <p>Cargando...</p>}
