@@ -81,9 +81,9 @@ export default function Home() {
               </header>
 
               <main className='min-h-screen bg-azul-oscuro py-10 px-4 md:px-40 ' id='proyectos'>
-                <h2 className='text-2xl text-gris-claro font-bold text-center'>Mis Proyectos</h2>
+                <h2 className='text-2xl text-gris-claro font-heading font-bold text-center'>Mis Proyectos</h2>
                 <div>
-                  <p className='font-poppins font-medium text-sm text-gris-claro'>Categorías:</p>
+                  <p className='font-poppins font-medium text-sm text-gris-claro mt-5 lg:mt-9'>Categorías:</p>
                   <div className='flex flex-row justify-between my-2'>
                     <button className={` ${filtro === 'todos' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('todos') }>Todos</button>
                     <button className={` ${filtro === 'web' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('web') }>Web</button>
