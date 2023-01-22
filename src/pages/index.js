@@ -3,7 +3,7 @@ import Head from 'next/head';
 import { Inter } from '@next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
-import Script from 'next/script';
+import Proyecto from '@/components/Proyecto';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -91,8 +91,8 @@ export default function Home() {
                     <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('design') }>Diseño</button>
                   </div>
                 </div>
-                <div className='mx-4 md:mx-'>
-                  
+                <div className='mx-4 grid lg:grid-cols-2 lg:gap-x-7 gap-y-5 lg:gap-y-9 mt-9 lg:mt-16'>
+                  {proyectos.map(proyecto => <Proyecto proyecto={proyecto}/>)}
                 </div>
               </main>
 
