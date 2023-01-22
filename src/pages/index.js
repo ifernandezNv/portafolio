@@ -43,7 +43,7 @@ export default function Home() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="keywords" content="Desarrollo de Software, desarrollo de software, frontend, front-end, desarrollador front-end, desarrollador frontend, HTML, HTML5, CSS3, TAILWINDCSS, tailwindcss, tailwindCSS, ReactJS, reactjs, NextJS, nextjs, React Native, react native, Figma, figma, mongodb, MongoDB, UI, ui, ux, UX, UI/UX" />
             <meta name="author" content="Isaac Fernández Navarro" />
-            <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js" strategy='afterInteractive'></script>
+            <Script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js" strategy='afterInteractive'/>
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <body>
