@@ -37,25 +37,25 @@ export default function Home() {
                       // cover={"true"}
                       className='w-100 lg:min-w-full relative blur min-h-screen lg:h-1/2'
                     />
-                    <div className='flex flex-col items-center justify-center absolute -top-28 z-50 w-full min-h-screen' >
+                    <div className='flex flex-col items-center justify-center absolute -top-28 z-50 w-full min-h-screen my-10' >
                       <h1 className='text-white text-center text-4xl font-bold tracking-wider'>Hola, Soy Isaac Fernández</h1>
                       <h2 className='text-2xl font-bold mt-16 text-white'>Desarrollador <span className='text-span'>Front-End</span></h2>
                       <p className='text-white text-center text-lg font-medium mt-10'>Conoce un poco más acerca de mí</p>
                       <p className='text-white text-center text-lg font-medium'>y mira mis proyectos más destacables</p>
                       <div className='flex flex-col md:flex-row justify-center items-center gap-4 mt-9'>
-                        <Link href='https://github.com/ifernandezNv' alt='Github profile' className='text-white text-sm font-bold flex gap-3 items-center '>
+                        <Link href='https://github.com/ifernandezNv' target='_blank' noreferer alt='Github profile' className='text-white text-sm font-bold flex gap-3 items-center '>
                           <iconify-icon icon="tabler:brand-github" style={{color: 'white'}} width={26} height={26}></iconify-icon>
                           Github
                         </Link>
                       
-                        <Link href='https://github.com/ifernandezNv' alt='Github profile' className='text-white text-sm font-bold flex gap-3 items-center justify-center'>
+                        <Link href='https://www.linkedin.com/in/isaac-fern%C3%A1ndez-navarro-b41870215/' target='_blank' noreferer alt='Github profile' className='text-white text-sm font-bold flex gap-3 items-center justify-center'>
                         <iconify-icon icon="lucide:linkedin" style={{color: 'white'}} width="26" height="26"></iconify-icon>
                           LinkedIn
                         </Link>
                       </div>
                       <div className='flex flex-col md:flex-row gap-12 mt-14'>
                           <Link href='/#proyectos' className='text-center text-white shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:border-bgAzul hover:text-black transition-all' >Ver Proyectos</Link>
-                          <a href="/assets/Isaac Fernández Navarro.pdf" download className='text-black px-10 py-4 font-semibold rounded bg-white'>Descargar CV</a>
+                          <a href="/assets/Isaac Fernández Navarro.pdf" download className='text-black px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white transition-all'>Descargar CV</a>
                         </div>
                     </div>
               </header>
