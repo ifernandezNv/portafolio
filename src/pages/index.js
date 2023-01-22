@@ -85,10 +85,10 @@ export default function Home() {
                 <div>
                   <p className='font-poppins font-medium text-sm text-gris-claro'>Categorías:</p>
                   <div className='flex flex-row justify-between my-2'>
-                    <button className={` ${filtro === 'todos' ? 'bg-span text-white font-bold' : 'text-black bg-white border-span'} py-2 px-5 rounded`} onClick={ ()=> setFiltro('todos') }>Todos</button>
-                    <button className={` ${filtro === 'web' ? 'bg-span text-white font-bold' : 'text-black bg-white border-span'} py-2 px-5 rounded`} onClick={ ()=> setFiltro('web') }>Web</button>
-                    <button className={` ${filtro === 'movil' ? 'bg-span text-white font-bold' : 'text-black bg-white border-span'} py-2 px-5 rounded`} onClick={ ()=> setFiltro('movil') }>Móvil</button>
-                    <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold' : 'text-black bg-white border-span'} py-2 px-5 rounded`} onClick={ ()=> setFiltro('design') }>Diseño</button>
+                    <button className={` ${filtro === 'todos' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-2' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('todos') }>Todos</button>
+                    <button className={` ${filtro === 'web' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-2' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('web') }>Web</button>
+                    <button className={` ${filtro === 'movil' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-2' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('movil') }>Móvil</button>
+                    <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-2' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('design') }>Diseño</button>
                   </div>
                 </div>
                 <div className='mx-4 md:mx-'>
