@@ -8,11 +8,11 @@ function Proyecto({proyecto}) {
     <div className='bg-white rounded shadow'>
       <Image
         src={img}
-        width={600}
-        height={200}
+        width={1200}
+        height={1200}
         // fill={'true'}
         alt={`Imagen representativa de ${titulo}`}
-        className='flex justify-center rounded-top h-60'
+        className='flex justify-center rounded h-50 lg:h-60'
       />
       <div className='px-2 md:px-8 md:py-4'>
         <h3 className='font-bold text-movil-xl lg:text-lg'>{titulo}</h3>
