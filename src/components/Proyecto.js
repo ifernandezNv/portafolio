@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Tecnologia from './Tecnologia';
 function Proyecto({proyecto}) {
     const {titulo, stack, repo, verProyecto, img} = proyecto;
-    console.log(img);
   return (
     <div className='bg-white rounded shadow'>
       <Image
@@ -19,7 +18,7 @@ function Proyecto({proyecto}) {
         <h3 className='font-bold text-movil-xl lg:text-lg'>{titulo}</h3>
         <p className='text-movil-lg font-light lg:text-sm'>Stack Utilizado: </p>
         <div className='my-1 md:my-2 lg:my-3 grid grid-cols-2 gap-1'>
-          {stack.map(tecnologia => <Tecnologia tecnologia={tecnologia}/>)}
+          {stack.map(tecnologia => <Tecnologia tecnologia={tecnologia} key={tecnologia.nombre}/>)}
         </div>
       </div>
       <div className={`${ verProyecto && repo ? 'flex justify-between items-center mx-10 my-10 gap-10' : 'flex justify-center'} my-4`}>
