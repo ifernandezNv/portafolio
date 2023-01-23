@@ -27,12 +27,18 @@ export default function Home() {
   },[])
 
   useEffect(()=>{
+    filtrarProyectos(filtro);
+  },[filtro])
+
+  function filtrarProyectos(filtro){
+    console.log(filtro);
     if(filtro !== 'todos'){
       const proyectosFiltrados = proyectos.map(proyecto => proyecto.categoria === filtro && proyecto);
       setProyectos(proyectosFiltrados);
+      return;
     }
-    setProyectos(proyectos);
-  },[filtro])
+    // setProyectos(proyectos);
+  }
 
   return (
       <>
@@ -102,7 +108,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='mx-4 grid md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-x-7 gap-y-5 lg:gap-y-9 mt-9 lg:mt-16 lg:mx-40 transition-all'>
-                  {proyectos.map(proyecto => <Proyecto proyecto={proyecto} key={proyecto.id}/>)}
+                  {proyectos?.map(proyecto => <Proyecto proyecto={proyecto} key={proyecto.id}/>)}
                 </div>
               </main>
 
