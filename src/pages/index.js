@@ -4,17 +4,18 @@ import { Inter } from '@next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import Proyecto from '@/components/Proyecto';
+import {Icon} from '@iconify/react';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   const [paginaLista, setPaginaLista] = useState(false);
   const [proyectos, setProyectos] = useState
     ([
-      {id:1, titulo: 'Áureos', stack: [{nombre: 'React Native'}, {nombre: 'ReactJS'}, {nombre: 'NodeJS'}, {nombre: 'MongoDB'}, {nombre: 'Figma'}, {nombre: 'Express'}], repo: 'https://github.com/ifernandezNv/Aureos-Frontend', categoria: 'movil', img: '/assets/aureos.png'},
-      {id:2, titulo: 'UpTask', stack: [{nombre: 'ReactJS'}, {nombre: 'NodeJS'}, {nombre: 'MongoDB'}, {nombre: 'Express'}], repo: 'https://github.com/ifernandezNv/UpTask_frontend', categoria: 'web', img: '/assets/imagen proyecto 5.png'},
-      {id:3, titulo: 'GutiarLA', stack: [{nombre: 'Astro'}, {nombre: 'PostgreSQL'}, {nombre: 'TailwindCSS'}], repo: 'https://github.com/ifernandezNv/astro-guitarla', verProyecto: 'https://astro-guitarla.vercel.app/', categoria: 'web', img: '/assets/imagen proyecto 3.png'},
+      {id:1, titulo: 'Áureos', stack: [{nombre: 'React Native'}, {nombre: 'ReactJS'}, {nombre: 'NodeJS'}, {nombre: 'MongoDB', icono: 'skill-icons:mongodb'}, {nombre: 'Figma'}, {nombre: 'ExpressJS'}], repo: 'https://github.com/ifernandezNv/Aureos-Frontend', categoria: 'movil', img: '/assets/aureos.png'},
+      {id:2, titulo: 'UpTask', stack: [{nombre: 'ReactJS'}, {nombre: 'NodeJS'}, {nombre: 'MongoDB', icono: 'skill-icons:mongodb'}, {nombre: 'ExpressJS'}], repo: 'https://github.com/ifernandezNv/UpTask_frontend', categoria: 'web', img: '/assets/imagen proyecto 5.png'},
+      {id:3, titulo: 'GutiarLA', stack: [{nombre: 'Astro', icono: 'vscode-icons:file-type-astro'}, {nombre: 'PostgreSQL'}, {nombre: 'TailwindCSS'}], repo: 'https://github.com/ifernandezNv/astro-guitarla', verProyecto: 'https://astro-guitarla.vercel.app/', categoria: 'web', img: '/assets/imagen proyecto 3.png'},
       {id:4, titulo: 'Diseño UI de mi Portafolio', stack: [{nombre: 'Figma'}], repo:'', verProyecto: 'https://www.figma.com/file/wXmXRgNfO5ILWfJU4HFD4n/UI---Portafolio?node-id=76%3A45&t=seCAjHwD1hFP6EbV-1', categoria: 'design', img:'/assets/figma 2.png'},
-      {id:5, titulo: 'ITMaps', stack: [{nombre: 'JavaScript'}, {nombre: 'HTML5'}, {nombre: 'CSS3'}, ], repo: 'https://github.com/ifernandezNv/itmaps', verProyecto: 'https://itmaps.netlify.app/', img: '/assets/imagen proyecto 4.png'},
+      {id:5, titulo: 'ITMaps', stack: [{nombre: 'JavaScript', icono: 'simple-icons:javascript'}, {nombre: 'HTML5', icono: 'ri:html5-fill'}, {nombre: 'CSS3', icono: 'ion:logo-css3'}, ], repo: 'https://github.com/ifernandezNv/itmaps', verProyecto: 'https://itmaps.netlify.app/', img: '/assets/imagen proyecto 4.png'},
       {id:6, titulo: 'Diseño UI de ITMaps', stack: [{nombre: 'Figma'}], repo:'', verProyecto: 'https://www.figma.com/file/EQJ4XK0nhNEEmxBXdhspkB/ItMaps?node-id=0%3A1&t=pngmBMDjraHvizE6-1', categoria: 'design', img:'/assets/figma 1.png'}
     ]);
     const [filtro, setFiltro] = useState('todos');
@@ -44,7 +45,6 @@ export default function Home() {
             <meta name="keywords" content="Desarrollo de Software, desarrollo de software, frontend, front-end, desarrollador front-end, desarrollador frontend, HTML, HTML5, CSS3, TAILWINDCSS, tailwindcss, tailwindCSS, ReactJS, reactjs, NextJS, nextjs, React Native, react native, Figma, figma, mongodb, MongoDB, UI, ui, ux, UX, UI/UX" />
             <meta name="author" content="Isaac Fernández Navarro" />
             <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
-            <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <>
@@ -67,12 +67,12 @@ export default function Home() {
 
                       <div className='flex flex-col md:flex-row justify-center items-center gap-4 mt-9'>
                         <Link href='https://github.com/ifernandezNv' target='_blank' noreferer='true' alt='Github profile' className='text-white text-movil-xl md:text-sm font-bold flex gap-3 items-center '>
-                          <iconify-icon icon="tabler:brand-github" style={{color: 'white'}} width={26} height={26}></iconify-icon>
+                          <Icon icon="tabler:brand-github" style={{color: 'white'}} width={26} height={26}/>
                           Github
                         </Link>
                       
                         <Link href='https://www.linkedin.com/in/isaac-fern%C3%A1ndez-navarro-b41870215/' target='_blank' noreferer='true' alt='Github profile' className='text-white text-movil-xl md:text-sm font-bold flex gap-3 items-center justify-center'>
-                        <iconify-icon icon="lucide:linkedin" style={{color: 'white'}} width="26" height="26"></iconify-icon>
+                        <Icon icon="lucide:linkedin" style={{color: 'white'}} width="26" height="26" />
                           LinkedIn
                         </Link>
                       </div>
@@ -83,9 +83,10 @@ export default function Home() {
                         </div>
                     </div>
 
-                    <div className={`absolute bg-white z-50 w-11 border-red bottom-10 right-10 rounded md:hidden`}>
-                      {/* <iconify-icon icon="material-symbols:arrow-circle-down-outline-rounded" style="color: #1692aa;" width="40" height="40"></iconify-icon> */}
-                      <a href='#proyectos'>Bajar</a>
+                    <div className={`absolute z-50 bottom-10 right-10 rounded md:hidden`}>
+                      <a href="#proyectos">
+                        <Icon icon="material-symbols:arrow-circle-down-outline-rounded" color="#1692aa" width="40" height="40" />
+                      </a>
                     </div>  
               </header>
 
@@ -100,7 +101,7 @@ export default function Home() {
                     <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} text-movil-lg md:text-sm lg:text-md py-2 px-5 rounded transition-all lg:w-1/6`} onClick={ ()=> setFiltro('design') }>Diseño</button>
                   </div>
                 </div>
-                <div className='mx-4 grid md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-x-7 gap-y-5 lg:gap-y-9 mt-9 lg:mt-16 lg:mx-40'>
+                <div className='mx-4 grid md:grid-cols-2 md:gap-5 lg:grid-cols-3 lg:gap-x-7 gap-y-5 lg:gap-y-9 mt-9 lg:mt-16 lg:mx-40 transition-all'>
                   {proyectos.map(proyecto => <Proyecto proyecto={proyecto} key={proyecto.id}/>)}
                 </div>
               </main>
