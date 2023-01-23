@@ -18,6 +18,7 @@ export default function Home() {
       {id:5, titulo: 'ITMaps', stack: [{nombre: 'JavaScript', icono: 'simple-icons:javascript'}, {nombre: 'HTML5', icono: 'ri:html5-fill'}, {nombre: 'CSS3', icono: 'ion:logo-css3'}, ], repo: 'https://github.com/ifernandezNv/itmaps', verProyecto: 'https://itmaps.netlify.app/', img: '/assets/imagen proyecto 4.png'},
       {id:6, titulo: 'Diseño UI de ITMaps', stack: [{nombre: 'Figma'}], repo:'', verProyecto: 'https://www.figma.com/file/EQJ4XK0nhNEEmxBXdhspkB/ItMaps?node-id=0%3A1&t=pngmBMDjraHvizE6-1', categoria: 'design', img:'/assets/figma 1.png'}
     ]);
+    const [proyectosBandera, setProyectosBandera] = useState(proyectos);
     const [filtro, setFiltro] = useState('todos');
 
   useEffect(()=>{
@@ -31,13 +32,14 @@ export default function Home() {
   },[filtro])
 
   function filtrarProyectos(filtro){
-    console.log(filtro);
+    setProyectos(proyectosBandera);
     if(filtro !== 'todos'){
-      const proyectosFiltrados = proyectos.map(proyecto => proyecto.categoria === filtro && proyecto);
-      setProyectos(proyectosFiltrados);
+      const proyectosFiltrados = proyectosBandera.filter(proyecto => proyecto.categoria === filtro && proyecto);
+      setProyectos(proyectosFiltrados);;
       return;
     }
-    // setProyectos(proyectos);
+    setProyectos(proyectosBandera);
+    
   }
 
   return (
