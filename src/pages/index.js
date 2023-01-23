@@ -10,12 +10,12 @@ export default function Home() {
   const [paginaLista, setPaginaLista] = useState(false);
   const [proyectos, setProyectos] = useState
     ([
-      {titulo: 'Áureos', stack: ['React Native', 'ReactJS', 'NodeJS', 'MongoDB', 'Figma', 'Express'], repo: 'https://github.com/ifernandezNv/Aureos-Frontend', categoria: 'movil'},
-      {titulo: 'UpTask', stack: ['ReactJS', 'NodeJS', 'MongoDB', 'Express'], repo: 'https://github.com/ifernandezNv/UpTask_frontend', categoria: 'web'},
-      {titulo: 'GutiarLA', stack: ['Astro', 'PostgreSQL', 'TailwindCSS'], repo: 'https://github.com/ifernandezNv/astro-guitarla', verProyecto: 'https://astro-guitarla.vercel.app/', categoria: 'web'},
-      {titulo: 'Diseño UI de mi Portafolio', stack: ['Figma'], repo:'', verProyecto: 'https://www.figma.com/file/wXmXRgNfO5ILWfJU4HFD4n/UI---Portafolio?node-id=76%3A45&t=seCAjHwD1hFP6EbV-1', categoria: 'design'},
-      {titulo: 'ITMaps', stack: ['JavaScript', 'HTML5', 'CSS3', ], repo: 'https://github.com/ifernandezNv/itmaps', verProyecto: 'https://itmaps.netlify.app/'},
-      {titulo: 'Diseño UI de ITMaps', stack: ['Figma'], repo:'', verProyecto: 'https://www.figma.com/file/EQJ4XK0nhNEEmxBXdhspkB/ItMaps?node-id=0%3A1&t=pngmBMDjraHvizE6-1', categoria: 'design'}
+      {titulo: 'Áureos', stack: ['React Native', 'ReactJS', 'NodeJS', 'MongoDB', 'Figma', 'Express'], repo: 'https://github.com/ifernandezNv/Aureos-Frontend', categoria: 'movil', img: '/assets/aureos.png'},
+      {titulo: 'UpTask', stack: ['ReactJS', 'NodeJS', 'MongoDB', 'Express'], repo: 'https://github.com/ifernandezNv/UpTask_frontend', categoria: 'web', img: '/assets/imagen proyecto 2.png'},
+      {titulo: 'GutiarLA', stack: ['Astro', 'PostgreSQL', 'TailwindCSS'], repo: 'https://github.com/ifernandezNv/astro-guitarla', verProyecto: 'https://astro-guitarla.vercel.app/', categoria: 'web', img: '/assets/imagen proyecto 3.png'},
+      {titulo: 'Diseño UI de mi Portafolio', stack: ['Figma'], repo:'', verProyecto: 'https://www.figma.com/file/wXmXRgNfO5ILWfJU4HFD4n/UI---Portafolio?node-id=76%3A45&t=seCAjHwD1hFP6EbV-1', categoria: 'design', img:'/assets/figma 2.png'},
+      {titulo: 'ITMaps', stack: ['JavaScript', 'HTML5', 'CSS3', ], repo: 'https://github.com/ifernandezNv/itmaps', verProyecto: 'https://itmaps.netlify.app/', img: '/assets/imagen proyecto 4.png'},
+      {titulo: 'Diseño UI de ITMaps', stack: ['Figma'], repo:'', verProyecto: 'https://www.figma.com/file/EQJ4XK0nhNEEmxBXdhspkB/ItMaps?node-id=0%3A1&t=pngmBMDjraHvizE6-1', categoria: 'design', img:'/assets/figma 1.png'}
     ]);
     const [filtro, setFiltro] = useState('todos');
 
@@ -85,10 +85,10 @@ export default function Home() {
                 <div>
                   <p className='font-poppins font-medium text-sm text-gris-claro mt-5 lg:mt-9'>Categorías:</p>
                   <div className='flex flex-row justify-between my-2'>
-                    <button className={` ${filtro === 'todos' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('todos') }>Todos</button>
-                    <button className={` ${filtro === 'web' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('web') }>Web</button>
-                    <button className={` ${filtro === 'movil' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('movil') }>Móvil</button>
-                    <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('design') }>Diseño</button>
+                    <button className={` ${filtro === 'todos' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white hover:border-white border-b-4 font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('todos') }>Todos</button>
+                    <button className={` ${filtro === 'web' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white hover:border-white border-b-4 font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('web') }>Web</button>
+                    <button className={` ${filtro === 'movil' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white hover:border-white border-b-4 font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('movil') }>Móvil</button>
+                    <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white hover:border-white border-b-4 font-semibold'} py-2 px-5 rounded transition-all`} onClick={ ()=> setFiltro('design') }>Diseño</button>
                   </div>
                 </div>
                 <div className='mx-4 grid lg:grid-cols-2 lg:gap-x-7 gap-y-5 lg:gap-y-9 mt-9 lg:mt-16'>

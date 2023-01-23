@@ -1,7 +1,8 @@
 import React from 'react';
-
+import Link from 'next/link';
 function Proyecto({proyecto}) {
     const {titulo, stack, repo, verProyecto} = proyecto;
+    console.log(verProyecto);
   return (
     <div className='bg-white rounded shadow'>
       <div className='px-2 md:px-8 md:py-4'>
@@ -11,10 +12,10 @@ function Proyecto({proyecto}) {
       </div>
       <div className={`${ verProyecto && repo ? 'flex justify-between mx-10 my-10 gap-10' : 'flex justify-center'} my-4`}>
         {verProyecto &&(
-          <button className='bg-bgAzul w-3/5 text-white capitalize font-bold p-4 rounded shadow' >Ver Proyecto</button>
+          <Link className='bg-bgAzul w-3/5 text-white text-center capitalize font-bold p-4 rounded shadow' href={verProyecto} target='_blank' >Ver Proyecto</Link>
         )}
         {repo && (
-          <button href={repo} className='capitalize w-3/5 font-bold p-4 rounded shadow border-span border-2'>Ver Repositorio</button>
+          <Link href={`${repo}`} className='capitalize w-3/5 font-bold p-4 text-center rounded shadow border-span border-2' target='_blank'>Ver Repositorio</Link>
         )}
       </div>
     </div>
