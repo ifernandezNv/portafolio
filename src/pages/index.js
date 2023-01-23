@@ -77,8 +77,8 @@ export default function Home() {
                       </div>
 
                       <div className='flex flex-col md:flex-row gap-12 mt-14'>
-                          <Link href='/#proyectos' className='text-center text-white shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:border-bgAzul hover:text-black hover:border-span hover:border-b-4 transition-all' >Ver Proyectos</Link>
-                          <a href="/assets/Isaac Fernández Navarro.pdf" download className='text-black px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white transition-all'>Descargar CV</a>
+                          <Link href='/#proyectos' className='text-center text-white text-movil-xl md:text-sm shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:border-bgAzul hover:text-black hover:border-span hover:border-b-4 transition-all' >Ver Proyectos</Link>
+                          <a href="/assets/Isaac Fernández Navarro.pdf" download className='text-black text-movil-xl md:text-sm px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white transition-all'>Descargar CV</a>
                         </div>
                     </div>
               </header>
