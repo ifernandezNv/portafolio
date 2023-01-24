@@ -14,7 +14,7 @@ export default function Home() {
       {id:1, titulo: 'Áureos', stack: [{nombre: 'React Native'}, {nombre: 'ReactJS'}, {nombre: 'NodeJS'}, {nombre: 'MongoDB', icono: 'skill-icons:mongodb'}, {nombre: 'Figma'}, {nombre: 'ExpressJS'}], repo: 'https://github.com/ifernandezNv/Aureos-Frontend', categoria: 'movil', img: '/assets/aureos.png'},
       {id:2, titulo: 'UpTask', stack: [{nombre: 'ReactJS'}, {nombre: 'NodeJS'}, {nombre: 'MongoDB', icono: 'skill-icons:mongodb'}, {nombre: 'ExpressJS'}], repo: 'https://github.com/ifernandezNv/UpTask_frontend', categoria: 'web', img: '/assets/imagen proyecto 5.png'},
       {id:3, titulo: 'GutiarLA', stack: [{nombre: 'Astro', icono: 'vscode-icons:file-type-astro'}, {nombre: 'PostgreSQL'}, {nombre: 'TailwindCSS'}], repo: 'https://github.com/ifernandezNv/astro-guitarla', verProyecto: 'https://astro-guitarla.vercel.app/', categoria: 'web', img: '/assets/imagen proyecto 6.png'},
-      {id:4, titulo: 'Diseño UI de mi Portafolio', stack: [{nombre: 'Figma'}], repo:'', verProyecto: 'https://www.figma.com/file/wXmXRgNfO5ILWfJU4HFD4n/UI---Portafolio?node-id=76%3A45&t=seCAjHwD1hFP6EbV-1', categoria: 'design', img:'/assets/figma 3.png'},
+      {id:4, titulo: 'Diseño UI de mi Portafolio', stack: [{nombre: 'Figma'}], repo:'', verProyecto: 'https://www.figma.com/file/wXmXRgNfO5ILWfJU4HFD4n/UI---Portafolio?node-id=76%3A45&t=seCAjHwD1hFP6EbV-1', categoria: 'design', img:'/assets/imagen proyecto 1.png'},
       {id:5, titulo: 'ITMaps', stack: [{nombre: 'JavaScript', icono: 'simple-icons:javascript'}, {nombre: 'HTML5', icono: 'ri:html5-fill'}, {nombre: 'CSS3', icono: 'ion:logo-css3'}, ], repo: 'https://github.com/ifernandezNv/itmaps', verProyecto: 'https://itmaps.netlify.app/', img: '/assets/imagen proyecto 4.png'},
       {id:6, titulo: 'Diseño UI de ITMaps', stack: [{nombre: 'Figma'}], repo:'', verProyecto: 'https://www.figma.com/file/EQJ4XK0nhNEEmxBXdhspkB/ItMaps?node-id=0%3A1&t=pngmBMDjraHvizE6-1', categoria: 'design', img:'/assets/figma 1.png'}
     ]);
@@ -38,8 +38,7 @@ export default function Home() {
       setProyectos(proyectosFiltrados);;
       return;
     }
-    setProyectos(proyectosBandera);
-    
+    setProyectos(proyectosBandera); 
   }
 
   return (
@@ -56,15 +55,15 @@ export default function Home() {
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <>
-              <header className={`min-h-screen lg:h-1/2 bg-azul-oscuro relative`}>
+              <header className={`min-h-screen lg:h-1/2 bg-azul-oscuro relative overflow-y-hidden`}>
                     <Image 
-                      src={'/assets/bgHeader.png'}
+                      src={'/assets/imagen proyecto 6.png'}
                       alt='Imagen bg-header'
-                      height={1200}
+                      height={700}
                       width={1200}
                       quality={100}
-                      // cover={"true"}
-                      className='w-100 lg:min-w-full relative blur min-h-screen lg:h-1/2'
+                      cover={"true"}
+                      className='w-100 lg:min-w-full relative blur min-h-screen'
                     />
                     <div className='flex flex-col items-center justify-center absolute -top-28 z-10 w-full min-h-screen my-10' >
                       <h1 className='text-white text-center text-movil-2xl md:text-2xl lg:text-4xl font-bold lg:tracking-wider'>Hola, Soy Isaac Fernández</h1>

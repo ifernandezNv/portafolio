@@ -14,7 +14,7 @@ function Proyecto({proyecto}) {
             height={1200}
             // fill={'true'}
             alt={`Imagen representativa de ${titulo}`}
-            className='flex justify-center rounded h-50 lg:h-60'
+            className='flex justify-center rounded-top h-50 lg:h-60'
           />
           <div className='px-2 md:px-8 md:py-4'>
             <h3 className='font-bold text-movil-xl lg:text-lg'>{titulo}</h3>
