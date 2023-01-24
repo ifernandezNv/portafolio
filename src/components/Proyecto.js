@@ -25,7 +25,7 @@ function Proyecto({proyecto}) {
           </div>
           <div className={`${ verProyecto && repo ? 'flex justify-between items-center mx-10 my-10 gap-10' : 'flex justify-center'} my-4`}>
             {verProyecto &&(
-              <Link className='bg-bgAzul w-3/5 text-white text-center capitalize font-bold p-1 rounded shadow  hover:bg-white hover:text-black hover:border-span hover:border-b-4 transition-all' href={verProyecto} target='_blank' >Ver Proyecto</Link>
+              <Link className='bg-bgAzul w-3/5 text-white text-center capitalize font-bold p-1 rounded shadow  hover:bg-white hover:text-black hover:border-span hover:border-b-4 hover:border-t-4 transition-all' href={verProyecto} target='_blank' >Ver Proyecto</Link>
             )}
             {repo && (
               <Link href={`${repo}`} className='capitalize w-3/5 font-bold p-1 text-center rounded shadow border-span border-2' target='_blank'>Ver Repositorio</Link>
