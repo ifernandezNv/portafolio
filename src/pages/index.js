@@ -99,7 +99,7 @@ export default function Home() {
               </header>
 
               <main className='min-h-screen bg-azul-oscuro py-10 px-4 md:px-20 ' id='proyectos'>
-                <h2 className='text-2xl text-gris-claro font-heading font-bold text-center'>Mis Proyectos</h2>
+                <h2 className='text-movil-2xl md:text-2xl text-white font-heading font-bold text-center'>Mis Proyectos</h2>
                 <div>
                   <p className='font-poppins font-medium text-sm text-gris-claro mt-5 lg:mt-9'>Categorías:</p>
                   <div className='flex flex-row justify-between items-center my-4'>
@@ -113,6 +113,13 @@ export default function Home() {
                   {proyectos?.map(proyecto => <Proyecto proyecto={proyecto} key={proyecto.id}/>)}
                 </div>
               </main>
+
+              <section id='#about' className='min-h-screen bg-azul-oscuro'>
+                <h2 className='font-lato text-center text-movil-2xl md:text-2xl font-bold text-white'>Conóceme más</h2>
+                <div className='py-10 px-4 md:px-20'>
+                  <p className='text-gris-claro text-movil-lg md:text-lg'>Soy un desarrollador <span className='font-semibold text-white'>FrontEnd</span> jóven  apasionado por crear </p>
+                </div>
+              </section>
 
             </>
         </>
