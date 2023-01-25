@@ -15,13 +15,13 @@ export default function Home() {
       
       {id:2, titulo: 'UpTask', stack: [{nombre: 'ReactJS'}, {nombre: 'NodeJS'}, {nombre: 'MongoDB', icono: 'skill-icons:mongodb'}, {nombre: 'ExpressJS'}], repo: 'https://github.com/ifernandezNv/UpTask_frontend', categoria: 'web', img: '/assets/imagen proyecto 5.png', funciones: [{id: 1, nombre: 'Crear Proyectos', icono: 'material-symbols:folder'}, {id: 2, nombre: 'Añadir Colaboradores', icono: 'fluent:people-team-20-filled'}, {id: 3, nombre: 'Crear Tareas', icono: 'icons8:todo-list'}]},
 
-      {id:3, titulo: 'GutiarLA', stack: [{nombre: 'Astro', icono: 'vscode-icons:file-type-astro'}, {nombre: 'PostgreSQL'}, {nombre: 'TailwindCSS'}], repo: 'https://github.com/ifernandezNv/astro-guitarla', verProyecto: 'https://astro-guitarla.vercel.app/', categoria: 'web', img: '/assets/figma 2.png', funciones: [{id: 1, nombre: '', icono: 'material-symbols:folder'}, {id: 2, nombre: 'Añadir Colaboradores', icono: 'fluent:people-team-20-filled'}, {id: 3, nombre: 'Crear Tareas', icono: 'icons8:todo-list'}]},
+      {id:3, titulo: 'GutiarLA', stack: [{nombre: 'Astro', icono: 'vscode-icons:file-type-astro'}, {nombre: 'PostgreSQL'}, {nombre: 'TailwindCSS'}], repo: 'https://github.com/ifernandezNv/astro-guitarla', verProyecto: 'https://astro-guitarla.vercel.app/', categoria: 'web', img: '/assets/figma 2.png', funciones: [{id: 1, nombre: 'Mostrar Productos', icono: 'material-symbols:folder'}, {id: 2, nombre: 'Proporcionar información de cada producto', icono: 'fluent:people-team-20-filled'}, {id: 3, nombre: 'Crear Tareas', icono: 'icons8:todo-list'}]},
 
       {id:4, titulo: 'Diseño UI de mi Portafolio', stack: [{nombre: 'Figma'}], repo:'', verProyecto: 'https://www.figma.com/file/wXmXRgNfO5ILWfJU4HFD4n/UI---Portafolio?node-id=76%3A45&t=seCAjHwD1hFP6EbV-1', categoria: 'design', img:'/assets/imagen proyecto 1.png', funciones: [{id: 1, nombre: 'Elaboración del UI Kit', icono: 'clarity:design-solid'}, {id: 2, nombre: 'Diseño de Prototipos', icono: 'fe:prototype'}]},
 
-      {id:5, titulo: 'ITMaps', stack: [{nombre: 'JavaScript', icono: 'simple-icons:javascript'}, {nombre: 'HTML5', icono: 'ri:html5-fill'}, {nombre: 'CSS3', icono: 'ion:logo-css3'}, ], repo: 'https://github.com/ifernandezNv/itmaps', verProyecto: 'https://itmaps.netlify.app/', img: '/assets/figma 3.png', funciones: [{id: 1, nombre: 'Mostrar Rutas', icono: 'ic:baseline-map'}, {id: 2, nombre: 'Proporcionar Información', icono: 'ic:sharp-info'}]},
+      {id:5, titulo: 'ITMaps', stack: [{nombre: 'JavaScript', icono: 'simple-icons:javascript'}, {nombre: 'HTML5', icono: 'ri:html5-fill'}, {nombre: 'CSS3', icono: 'ion:logo-css3'}, ], repo: 'https://github.com/ifernandezNv/itmaps', verProyecto: 'https://itmaps.netlify.app/', img: '/assets/figma 3.png', funciones: [{id: 1, nombre: 'Mostrar Rutas a cada departamento', icono: 'ic:baseline-map'}, {id: 2, nombre: 'Proporcionar Información de cada departamento', icono: 'ic:sharp-info'}]},
 
-      {id:6, titulo: 'Diseño UI de ITMaps', stack: [{nombre: 'Figma'}], repo:'', verProyecto: 'https://www.figma.com/file/EQJ4XK0nhNEEmxBXdhspkB/ItMaps?node-id=0%3A1&t=pngmBMDjraHvizE6-1', categoria: 'design', img:'/assets/figma 1.png', funciones: [{id: 1, nombre: 'Cración del diseño UI', icono: 'material-symbols:folder'}, {id: 2, nombre: 'Añadir Colaboradores', icono: 'fluent:people-team-20-filled'}, {id: 3, nombre: 'Crear Tareas', icono: 'icons8:todo-list'}]}
+      {id:6, titulo: 'Diseño UI de ITMaps', stack: [{nombre: 'Figma'}], repo:'', verProyecto: 'https://www.figma.com/file/EQJ4XK0nhNEEmxBXdhspkB/ItMaps?node-id=0%3A1&t=pngmBMDjraHvizE6-1', categoria: 'design', img:'/assets/figma 1.png', funciones: [{id: 1, nombre: 'Cración del diseño UI', icono: 'material-symbols:folder'}, {id: 2, nombre: 'Selección de Colores', icono: 'fluent:people-team-20-filled'}]}
     ]);
     const [proyectosBandera, setProyectosBandera] = useState(proyectos);
     const [filtro, setFiltro] = useState('todos');
@@ -33,14 +33,16 @@ export default function Home() {
   }, [paginaLista])
 
   useEffect(()=>{
-    filtrarProyectos(filtro);
+    if(filtro){
+      filtrarProyectos(filtro);
+    }
   },[filtro])
 
   function filtrarProyectos(filtro){
     setProyectos(proyectosBandera);
     if(filtro !== 'todos'){
       const proyectosFiltrados = proyectosBandera.filter(proyecto => proyecto.categoria === filtro && proyecto);
-      setProyectos(proyectosFiltrados);;
+      setProyectos(proyectosFiltrados);
       return;
     }
     setProyectos(proyectosBandera); 
