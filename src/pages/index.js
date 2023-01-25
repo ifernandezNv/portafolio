@@ -33,7 +33,6 @@ export default function Home() {
   }, [paginaLista])
 
   useEffect(()=>{
-    const proyectosBandera = proyectos;
     function filtrarProyectos(filtro){
       setProyectos(proyectosBandera);
       if(filtro !== 'todos'){
@@ -44,7 +43,7 @@ export default function Home() {
       setProyectos(proyectosBandera); 
     }
     filtrarProyectos(filtro);
-  },[filtro])
+  },[filtro, proyectosBandera])
 
 
   return (
