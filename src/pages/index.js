@@ -57,7 +57,6 @@ export default function Home() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="keywords" content="Desarrollo de Software, desarrollo de software, frontend, front-end, desarrollador front-end, desarrollador frontend, HTML, HTML5, CSS3, TAILWINDCSS, tailwindcss, tailwindCSS, ReactJS, reactjs, NextJS, nextjs, React Native, react native, Figma, figma, mongodb, MongoDB, UI, ui, ux, UX, UI/UX" />
             <meta name="author" content="Isaac Fernández Navarro" />
-            <Script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js" async />
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <>
@@ -125,7 +124,7 @@ export default function Home() {
                   <p className='text-gris-claro text-movil-lg md:text-lg'>Soy un desarrollador <span className='font-semibold text-white'>FrontEnd</span> jóven  apasionado por crear </p>
                 </div>
               </section>
-
+              <Script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js" async />
             </>
         </>
         ): <p>Cargando...</p>}
