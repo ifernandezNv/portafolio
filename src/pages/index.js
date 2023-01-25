@@ -30,7 +30,7 @@ export default function Home() {
     if(!paginaLista){
       setPaginaLista(true);
     }
-  },[])
+  })
 
   useEffect(()=>{
     filtrarProyectos(filtro);
