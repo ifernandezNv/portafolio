@@ -8,7 +8,7 @@ function Tecnologia({tecnologia}) {
         {icono ? <Icon icon={icono} color="#242938" width="30" height="30"/> : (
           <Icon icon={`${nombre.startsWith('React') ? `skill-icons:react-dark` : `skill-icons:${nombre.toLowerCase()}-dark`}`} color="#242938" width="30" height="30" />
         )}
-        <h4 className='text-movil-md md:text-label'>{nombre}</h4>
+        <p className='text-movil-md md:text-label'>{nombre}</p>
     </div>
   )
 }
