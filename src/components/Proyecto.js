@@ -8,14 +8,14 @@ function Proyecto({proyecto}) {
   return (
     <>
       {proyecto?.titulo &&(
-        <div className='bg-white rounded shadow transition-all'>
+        <div className='bg-white rounded shadow transition-all flex'>
           <Image
             src={img}
-            width={1200}
-            height={1200}
+            width={200}
+            height={160}
             // fill={'true'}
             alt={`Imagen representativa de ${titulo}`}
-            className='flex justify-center rounded-top h-50 lg:h-60'
+            className='flex justify-center rounded-left w-30 h-full'
           />
           <div className='px-2 md:px-8 md:py-4'>
             <div>
@@ -27,7 +27,7 @@ function Proyecto({proyecto}) {
             </div>
             <div className='my-2 lg:my-4'>
               <p className='text-movil-lg font-light lg:text-sm mb-2 lg:mb-4'>Funciones:</p>
-              <div className='my-1 md:my-2 lg:ml-3'>
+              <div className='lg:ml-3'>
                 {funciones?.map(funcion => <Funcion funcion={funcion} key={funcion.id} />)}
               </div>
               

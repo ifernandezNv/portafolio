@@ -38,7 +38,8 @@ module.exports = {
     extend: {
       borderRadius: {
         DEFAULT: "10px 10px 10px 10px",
-        "top": "10px 10px 0 0"
+        "top": "10px 10px 0 0",
+        "left": "10px 0 0 10px",
       },
       boxShadow: {
         DEFAULT: "0px 1px 60px rgba(180, 169, 227, 0.2)"
