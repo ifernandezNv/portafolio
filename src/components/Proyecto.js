@@ -8,14 +8,14 @@ function Proyecto({proyecto}) {
   return (
     <>
       {proyecto?.titulo &&(
-        <div className='bg-white rounded shadow transition-all flex flex-col md:flex-row'>
+        <div className='bg-white rounded shadow transition-all flex flex-col lg:flex-row'>
           <Image
             src={img}
             width={200}
             height={160}
             // fill={'true'}
             alt={`Imagen representativa de ${titulo}`}
-            className='flex justify-center rounded-top md:rounded-left w-full h-1/3 md:w-2/5 md:h-full'
+            className='flex justify-center rounded-top md:rounded-left w-full h-1/3 lg:w-2/5 lg:h-full'
           />
           <div className='px-2 py-2 md:px-4 md:py-4'>
             <div>
@@ -32,12 +32,12 @@ function Proyecto({proyecto}) {
               </div>
               
             </div>
-            <div className={`${ verProyecto && repo ? 'flex justify-between items-center mx-10 my-10 gap-10' : 'flex justify-center'} my-4 `}>
+            <div className={`${ verProyecto && repo ? 'flex md:flex-col lg:flex-col xl:flex-row justify-between items-center mx-10 my-10 gap-10' : 'flex justify-center'} my-4 `}>
               {verProyecto &&(
-                <Link className='bg-bgAzul w-3/5 text-white text-center capitalize font-bold p-1 rounded shadow  hover:bg-white hover:text-black hover:border-span hover:border-b-4 hover:border-t-4 transition-all' href={verProyecto} target='_blank' >Ver Proyecto</Link>
+                <Link className='bg-bgAzul w-full text-white text-center capitalize font-bold p-1 rounded shadow  hover:bg-white hover:text-black hover:border-span hover:border-b-4 hover:border-t-4 transition-all' href={verProyecto} target='_blank' >Ver Proyecto</Link>
               )}
               {repo && (
-                <Link href={`${repo}`} className='capitalize w-3/5 font-bold p-1 text-center rounded shadow border-span border-2' target='_blank'>Ver Repositorio</Link>
+                <Link href={`${repo}`} className='capitalize w-full font-bold p-1 text-center rounded shadow border-span border-2' target='_blank'>Ver Repositorio</Link>
               )}
             </div>
           </div>

@@ -113,7 +113,7 @@ export default function Home() {
                     <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} text-movil-lg md:text-sm lg:text-md py-2 px-5 rounded transition-all lg:w-1/6`} onClick={ ()=> setFiltro('design') }>Diseño</button>
                   </div>
                 </div>
-                <div className='mx-4 grid md:grid-cols-2 md:gap-5 lg:gap-x-7 gap-y-5 lg:gap-y-9 mt-9 lg:mt-16 lg:mx-40 transition-all'>
+                <div className='mx-4 grid lg:grid-cols-2 md:gap-5 lg:gap-x-7 gap-y-5 lg:gap-y-9 mt-9 lg:mt-16 lg:mx-40 transition-all'>
                   {proyectos?.map(proyecto => <Proyecto proyecto={proyecto} key={proyecto.id}/>)}
                 </div>
               </main>
