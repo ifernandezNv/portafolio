@@ -33,9 +33,7 @@ export default function Home() {
   }, [paginaLista])
 
   useEffect(()=>{
-    if(filtro){
-      filtrarProyectos(filtro);
-    }
+    return () => filtrarProyectos(filtro);
   },[filtro])
 
   function filtrarProyectos(filtro){
