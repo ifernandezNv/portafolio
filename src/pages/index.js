@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { Inter } from '@next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
+import Script from 'next/script';
 import Proyecto from '@/components/Proyecto';
 import {Icon} from '@iconify/react';
 const inter = Inter({ subsets: ['latin'] })
@@ -56,7 +57,7 @@ export default function Home() {
             <meta name="viewport" content="width=device-width, initial-scale=1" />
             <meta name="keywords" content="Desarrollo de Software, desarrollo de software, frontend, front-end, desarrollador front-end, desarrollador frontend, HTML, HTML5, CSS3, TAILWINDCSS, tailwindcss, tailwindCSS, ReactJS, reactjs, NextJS, nextjs, React Native, react native, Figma, figma, mongodb, MongoDB, UI, ui, ux, UX, UI/UX" />
             <meta name="author" content="Isaac Fernández Navarro" />
-            <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+            <Script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js" async />
             <link rel="icon" href="/favicon.ico" />
           </Head>
           <>
