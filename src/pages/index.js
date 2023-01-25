@@ -33,18 +33,18 @@ export default function Home() {
   }, [paginaLista])
 
   useEffect(()=>{
-    return () => filtrarProyectos(filtro);
+    function filtrarProyectos(filtro){
+      setProyectos(proyectosBandera);
+      if(filtro !== 'todos'){
+        const proyectosFiltrados = proyectosBandera.filter(proyecto => proyecto.categoria === filtro && proyecto);
+        setProyectos(proyectosFiltrados);
+        return;
+      }
+      setProyectos(proyectosBandera); 
+    }
+    filtrarProyectos(filtro);
   },[filtro])
 
-  function filtrarProyectos(filtro){
-    setProyectos(proyectosBandera);
-    if(filtro !== 'todos'){
-      const proyectosFiltrados = proyectosBandera.filter(proyecto => proyecto.categoria === filtro && proyecto);
-      setProyectos(proyectosFiltrados);
-      return;
-    }
-    setProyectos(proyectosBandera); 
-  }
 
   return (
       <>
