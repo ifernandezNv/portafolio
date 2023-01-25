@@ -5,7 +5,7 @@ function Funcion({funcion}) {
     const {nombre, icono} = funcion;
   return (
     <div className='flex gap-x-2'>
-        <Icon icon={icono} width={30} height={30}/>
+        <Icon icon={icono} color='242938' width={30} height={30}/>
         <p className='capitalize text-movil-md md:text-label'>{nombre}</p>
     </div>
   )
