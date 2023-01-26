@@ -5,8 +5,72 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import Proyecto from '@/components/Proyecto';
+import Tec from '@/components/Tec';
 import {Icon} from '@iconify/react';
 const inter = Inter({ subsets: ['latin'] })
+
+const TECNOLOGIAS = [
+  {
+    id: 1,
+    nombre: 'ReactJS',
+    icono: '',
+    experiencia: 1
+  },
+  {
+    id: 2,
+    nombre: 'React Native',
+    icono: '',
+    experiencia: 1
+  },
+  {
+    id: 3,
+    nombre: 'NextJS',
+    icono: '',
+    experiencia: 1
+  },
+  {
+    id: 4,
+    nombre: 'HTML5',
+    icono: '',
+    experiencia: 3
+  },
+  {
+    id: 5,
+    nombre: 'CSS3',
+    icono: '',
+    experiencia: 3
+  },
+  {
+    id: 6,
+    nombre: 'MongoDB',
+    icono: 'skill-icons:mongodb',
+    experiencia: 1
+  },
+  {
+    id: 7,
+    nombre: 'MySQL',
+    icono: '',
+    experiencia: 3
+  },
+  {
+    id: 8,
+    nombre: 'Figma',
+    icono: '',
+    experiencia: 3
+  },
+  {
+    id: 9,
+    nombre: 'JavaScript',
+    icono: '',
+    experiencia: 2
+  },
+  {
+    id: 10,
+    nombre: 'SASS',
+    icono: 'bxl:sass',
+    experiencia: 1
+  },
+]
 
 export default function Home() {
   const [paginaLista, setPaginaLista] = useState(false);
@@ -121,11 +185,16 @@ export default function Home() {
               <section id='#about' className='bg-azul-oscuro '>
                 <h2 className='font-lato text-center text-movil-2xl md:text-2xl font-bold text-white'>Conóceme un Poco Más</h2>
                 <div className='py-10 px-4 md:px-20 flex flex-col lg:flex-row gap-5 lg:gap-9 justify-center items-center'>
-                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8lg w-7/12'>
-                    <h3 className='text-center md:text-xl'>Tecnologías Utilizadas y Experiencia</h3>
+                  
+                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8 lg:w-7/12 h-60'>
+                    <h3 className='text-center md:text-xl font-lato'>Tecnologías Utilizadas y Experiencia</h3>
+                    <div className='grid grid-cols-2 gap-3 mt-3 lg:mt-6'>
+                      {TECNOLOGIAS.map(tecnologia => <Tec tecnologia={tecnologia}/>)}
+                    </div>
                   </div>
-                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8 lg:w-7/12'>
-                    <h3 className='text-center md:text-xl'>Descripción General</h3>
+                  
+                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8 lg:w-7/12 h-96'>
+                    <h3 className='text-center md:text-xl font-lato'>Descripción General</h3>
                     <p className='text-azul-oscuro text-movil-lg lg:text-sm lg:my-4'>Soy un desarrollador FrontEnd apasionado por crear productos apasionado por crear productos visualmente atractivos, útiles y rápidos</p>
                     <p className='font-semibold lg:text-sm lg:mt-4'>Intereses Varios:</p>
                     <p className='lg:text-sm'>Además de desarrollar y diseñar software, soy un gran fan de las siguientes disciplinas:</p>
