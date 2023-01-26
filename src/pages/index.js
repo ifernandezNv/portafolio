@@ -118,15 +118,39 @@ export default function Home() {
                 </div>
               </main>
 
-              <section id='#about' className='min-h-screen bg-azul-oscuro'>
+              <section id='#about' className='bg-azul-oscuro '>
                 <h2 className='font-lato text-center text-movil-2xl md:text-2xl font-bold text-white'>Conóceme un Poco Más</h2>
                 <div className='py-10 px-4 md:px-20 flex flex-col lg:flex-row gap-5 lg:gap-9 justify-center items-center'>
-                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8'>
+                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8lg w-7/12'>
                     <h3 className='text-center md:text-xl'>Tecnologías Utilizadas y Experiencia</h3>
                   </div>
-                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8'>
+                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8 lg:w-7/12'>
                     <h3 className='text-center md:text-xl'>Descripción General</h3>
-                    <p className='text-azul-oscuro text-movil-lg md:text-lg'>Soy un desarrollador <span className='font-semibold'>FrontEnd</span> jóven  apasionado por crear </p>
+                    <p className='text-azul-oscuro text-movil-lg lg:text-sm lg:my-4'>Soy un desarrollador FrontEnd apasionado por crear productos apasionado por crear productos visualmente atractivos, útiles y rápidos</p>
+                    <p className='font-semibold lg:text-sm lg:mt-4'>Intereses Varios:</p>
+                    <p className='lg:text-sm'>Además de desarrollar y diseñar software, soy un gran fan de las siguientes disciplinas:</p>
+                    <div className=' lg:ml-9 py-3 lg:py-5'>
+
+                      <div className='flex gap-x-2 items-center mb-2'>
+                        <Icon icon='game-icons:boxing-glove' color='242938' width={30} height={30}/>
+                        <p className='text-light text-movil-md md:text-sm'>Deportes de contacto</p>
+                      </div>
+
+                      <div className='flex gap-x-2 items-center mb-2'>
+                        <Icon icon='fa6-solid:guitar' color='242938' width={30} height={30}/>
+                        <p className='text-light text-movil-md md:text-sm'>Música</p>
+                      </div>
+
+                      <div className='flex gap-x-2 items-center mb-2'>
+                        <Icon icon='ion:earth' color='242938' width={30} height={30}/>
+                        <p className='text-light text-movil-md md:text-sm'>Idiomas</p>
+                      </div>
+
+                      <div className='flex gap-x-2 items-center mb-2'>
+                        <Icon icon='ic:round-book' color='242938' width={30} height={30}/>
+                        <p className='text-light text-movil-md md:text-sm'>Aprender</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
