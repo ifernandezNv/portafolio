@@ -62,7 +62,7 @@ export default function Home() {
           <>
               <header className={`min-h-screen lg:h-1/2 bg-azul-oscuro relative overflow-y-hidden`}>
                     <Image 
-                      src={'/assets/imagen proyecto 6.png'}
+                      src={'/assets/bgHeader.png'}
                       alt='Imagen bg-header'
                       height={700}
                       width={1200}
@@ -70,7 +70,7 @@ export default function Home() {
                       cover={"true"}
                       className='w-100 lg:min-w-full relative blur min-h-screen'
                     />
-                    <div className='flex flex-col items-center justify-center absolute -top-28 z-10 w-full min-h-screen my-10' >
+                    <div className='flex flex-col items-center justify-center absolute -top-28 z-10 w-full min-h-screen mt-20' >
                       <h1 className='text-white text-center text-movil-2xl md:text-2xl lg:text-4xl font-bold lg:tracking-wider'>Hola, Soy Isaac Fernández</h1>
                       <h2 className='text-movil-xl md:text-xl lg:text-2xl font-bold mt-16 text-white'>Desarrollador <span className='text-span'>Front-End</span></h2>
                       
@@ -79,19 +79,19 @@ export default function Home() {
 
                       <div className='flex flex-col md:flex-row justify-center items-center gap-4 mt-9'>
                         <Link href='https://github.com/ifernandezNv' target='_blank' noreferer='true' alt='Github profile' className='text-white text-movil-xl md:text-sm font-bold flex gap-3 items-center '>
-                          <Icon icon="tabler:brand-github" style={{color: 'white'}} width={26} height={26}/>
+                          <Icon icon="mingcute:github-fill" style={{color: 'white'}} width={26} height={26}/>
                           Github
                         </Link>
                       
                         <Link href='https://www.linkedin.com/in/isaac-fern%C3%A1ndez-navarro-b41870215/' target='_blank' noreferer='true' alt='Github profile' className='text-white text-movil-xl md:text-sm font-bold flex gap-3 items-center justify-center'>
-                        <Icon icon="lucide:linkedin" style={{color: 'white'}} width="26" height="26" />
+                        <Icon icon="ci:linkedin" style={{color: 'white'}} width="26" height="26" />
                           LinkedIn
                         </Link>
                       </div>
 
                       <div className='flex flex-col md:flex-row gap-12 mt-14'>
                           <Link href='/#proyectos' className='text-center text-white text-movil-xl md:text-sm shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:text-black hover:border-span hover:border-b-4 transition-all' >Ver Proyectos</Link>
-                          <a href="/assets/Isaac Fernández Navarro.pdf" download className='text-black text-movil-xl md:text-sm px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white transition-all'>Descargar CV</a>
+                          <a href="/assets/Isaac Fernández Navarro.pdf" download className='text-black text-movil-xl md:text-sm px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white hover:border-white hover:border-b-4  transition-all'>Descargar CV</a>
                         </div>
                     </div>
 
@@ -119,7 +119,7 @@ export default function Home() {
               </main>
 
               <section id='#about' className='min-h-screen bg-azul-oscuro'>
-                <h2 className='font-lato text-center text-movil-2xl md:text-2xl font-bold text-white'>Conóceme más</h2>
+                <h2 className='font-lato text-center text-movil-2xl md:text-2xl font-bold text-white'>Conóceme un Poco Más</h2>
                 <div className='py-10 px-4 md:px-20'>
                   <p className='text-gris-claro text-movil-lg md:text-lg'>Soy un desarrollador <span className='font-semibold text-white'>FrontEnd</span> jóven  apasionado por crear </p>
                 </div>
