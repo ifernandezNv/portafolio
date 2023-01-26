@@ -96,9 +96,9 @@ export default function Home() {
                     </div>
 
                     <div className={`absolute z-50 bottom-10 right-10 rounded md:hidden`}>
-                      <a href="#proyectos">
+                      <Link href="#proyectos">
                         <Icon icon="material-symbols:arrow-circle-down-outline-rounded" color="#1692aa" width="40" height="40" />
-                      </a>
+                      </Link>
                     </div>  
               </header>
 
@@ -120,8 +120,14 @@ export default function Home() {
 
               <section id='#about' className='min-h-screen bg-azul-oscuro'>
                 <h2 className='font-lato text-center text-movil-2xl md:text-2xl font-bold text-white'>Conóceme un Poco Más</h2>
-                <div className='py-10 px-4 md:px-20'>
-                  <p className='text-gris-claro text-movil-lg md:text-lg'>Soy un desarrollador <span className='font-semibold text-white'>FrontEnd</span> jóven  apasionado por crear </p>
+                <div className='py-10 px-4 md:px-20 flex flex-col lg:flex-row gap-5 lg:gap-9 justify-center items-center'>
+                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8'>
+                    <h3 className='text-center md:text-xl'>Tecnologías Utilizadas y Experiencia</h3>
+                  </div>
+                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8'>
+                    <h3 className='text-center md:text-xl'>Descripción General</h3>
+                    <p className='text-azul-oscuro text-movil-lg md:text-lg'>Soy un desarrollador <span className='font-semibold'>FrontEnd</span> jóven  apasionado por crear </p>
+                  </div>
                 </div>
               </section>
               <Script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js" async />
