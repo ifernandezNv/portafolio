@@ -11,6 +11,7 @@ module.exports = {
       "white": '#ffffff',
       "black": "#080C15",
       "gris-claro": '#D2D6D9',
+      "azul-rey": '#06090F'
     },
     fontFamily: {
       "sans": ['Lato', 'sans-serif'],

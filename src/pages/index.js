@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import Proyecto from '@/components/Proyecto';
 import Tec from '@/components/Tec';
+import Footer from '@/components/Footer';
 import {Icon} from '@iconify/react';
 const inter = Inter({ subsets: ['latin'] })
 
@@ -223,6 +224,7 @@ export default function Home() {
                   </div>
                 </div>
               </section>
+              <Footer/>
               <Script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js" async />
             </>
         </>
