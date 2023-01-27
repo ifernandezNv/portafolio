@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className='bg-azul-rey p-5 flex flex-col justify-center items-center'>
         <p className='text-white font-bold'>Pónte en contacto conmigo</p>
-        <div className='flex flex-col lg:flex-row my-3'>
+        <div className='flex flex-col lg:flex-row my-3 gap-5'>
           <div className='flex gap-3 items-center'>
             <Icon icon='material-symbols:phone-in-talk' color='white' width={30} height={30}/>
             <Link className='text-white font-semibold' href='tel: +52 6271328212' target={'_blank'} noreferrer='true'>+52 627-138-2812</Link>

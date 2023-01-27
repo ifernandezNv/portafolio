@@ -178,14 +178,14 @@ export default function Home() {
                     <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} text-movil-lg md:text-sm lg:text-md py-2 px-5 rounded transition-all lg:w-1/6`} onClick={ ()=> setFiltro('design') }>Diseño</button>
                   </div>
                 </div>
-                <div className='mx-4 grid lg:grid-cols-2 md:gap-5 lg:gap-x-7 gap-y-5 lg:gap-y-9 mt-9 lg:mt-16 lg:mx-40 transition-all'>
+                <div className='mx-4 grid lg:grid-cols-2 md:gap-5 lg:gap-x-7 gap-y-5 lg:gap-y-9 mt-9 lg:mt-16 lg:mx-24 transition-all'>
                   {proyectos?.map(proyecto => <Proyecto proyecto={proyecto} key={proyecto.id}/>)}
                 </div>
               </main>
 
-              <section id='#about' className='bg-azul-oscuro '>
+              <section id='#about' className='bg-azul-oscuro px-30'>
                 <h2 className='font-lato text-center text-movil-2xl md:text-2xl font-bold text-white'>Conóceme un Poco Más</h2>
-                <div className='py-10 px-4 md:px-20 flex flex-col lg:flex-row gap-5 lg:gap-9 justify-center items-center'>
+                <div className='py-10 px-4 lg:px-28 flex flex-col lg:flex-row gap-5 lg:gap-9 justify-center items-center'>
                   
                   <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8 lg:w-7/12'>
                     <h3 className='text-center md:text-xl font-lato'>Tecnologías Utilizadas y Experiencia</h3>

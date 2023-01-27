@@ -7,14 +7,14 @@ function Proyecto({proyecto}) {
   return (
     <>
       {proyecto?.titulo &&(
-        <div className='bg-white rounded shadow transition-all flex flex-col lg:flex-row'>
+        <div className='bg-white rounded shadow transition-all flex flex-col lg:flex-row h-3/4 md:h-full'>
           <Image
             src={img}
             width={200}
             height={160}
             // fill={'true'}
             alt={`Imagen representativa de ${titulo}`}
-            className='flex justify-center rounded-top md:rounded-left w-full h-1/3 lg:w-2/5 lg:h-full'
+            className='flex justify-center rounded-top md:rounded-left w-full h-2/5 lg:w-2/5 lg:h-full'
           />
           <div className='px-2 py-2 md:px-4 md:py-4'>
             <div>
