@@ -31,13 +31,13 @@ const TECNOLOGIAS = [
   {
     id: 4,
     nombre: 'HTML5',
-    icono: '',
+    icono: 'ion:logo-css3',
     experiencia: 3
   },
   {
     id: 5,
     nombre: 'CSS3',
-    icono: '',
+    icono: 'ri:html5-fill',
     experiencia: 3
   },
   {
@@ -61,13 +61,13 @@ const TECNOLOGIAS = [
   {
     id: 9,
     nombre: 'JavaScript',
-    icono: '',
+    icono: 'simple-icons:javascript',
     experiencia: 2
   },
   {
     id: 10,
-    nombre: 'SASS',
-    icono: 'bxl:sass',
+    nombre: 'TailwindCSS',
+    icono: '',
     experiencia: 1
   },
 ]
@@ -186,14 +186,14 @@ export default function Home() {
                 <h2 className='font-lato text-center text-movil-2xl md:text-2xl font-bold text-white'>Conóceme un Poco Más</h2>
                 <div className='py-10 px-4 md:px-20 flex flex-col lg:flex-row gap-5 lg:gap-9 justify-center items-center'>
                   
-                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8 lg:w-7/12 h-60'>
+                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8 lg:w-7/12'>
                     <h3 className='text-center md:text-xl font-lato'>Tecnologías Utilizadas y Experiencia</h3>
                     <div className='grid grid-cols-2 gap-3 mt-3 lg:mt-6'>
-                      {TECNOLOGIAS.map(tecnologia => <Tec tecnologia={tecnologia}/>)}
+                      {TECNOLOGIAS.map(tecnologia => <Tec tecnologia={tecnologia} key={tecnologia.id}/>)}
                     </div>
                   </div>
                   
-                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8 lg:w-7/12 h-96'>
+                  <div className='bg-white shador rounded p-3 lg:px-9 lg:py-8 lg:w-7/12'>
                     <h3 className='text-center md:text-xl font-lato'>Descripción General</h3>
                     <p className='text-azul-oscuro text-movil-lg lg:text-sm lg:my-4'>Soy un desarrollador FrontEnd apasionado por crear productos apasionado por crear productos visualmente atractivos, útiles y rápidos</p>
                     <p className='font-semibold lg:text-sm lg:mt-4'>Intereses Varios:</p>
