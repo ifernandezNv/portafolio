@@ -155,8 +155,9 @@ export default function Home() {
                       </div>
 
                       <div className='flex flex-col md:flex-row gap-12 mt-14'>
-                          <Link href='/#proyectos' className='text-center text-white text-movil-xl md:text-sm shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:text-black hover:border-span hover:border-b-4 transition-all' >Ver Proyectos</Link>
+                          <Link href='#proyectos' className='text-center text-white text-movil-xl md:text-sm shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:text-black hover:border-span hover:border-b-4 transition-all' >Ver Proyectos</Link>
                           <a href="/assets/Isaac Fernández Navarro.pdf" download className='text-black text-movil-xl md:text-sm px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white hover:border-white hover:border-b-4  transition-all'>Descargar CV</a>
+                          <Link href='#about' className='text-black text-movil-xl md:text-sm px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white hover:border-white hover:border-b-4  transition-all' >Conóceme Más</Link>
                         </div>
                     </div>
 
@@ -183,7 +184,7 @@ export default function Home() {
                 </div>
               </main>
 
-              <section id='#about' className='bg-azul-oscuro px-30'>
+              <section id='about' className='bg-azul-oscuro px-30'>
                 <h2 className='font-lato text-center text-movil-2xl md:text-2xl font-bold text-white'>Conóceme un Poco Más</h2>
                 <div className='py-10 px-4 lg:px-28 flex flex-col lg:flex-row gap-5 lg:gap-9 justify-center items-center'>
                   
