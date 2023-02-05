@@ -13,7 +13,7 @@ function Footer() {
 
           <div className='flex gap-3 items-center'>
             <Icon icon='ic:baseline-mark-email-unread' color='white' width={30} height={30}/>
-            <Link className='text-white font-semibold' href='mailto: ifernandeznv@gmail.com' target={'_blank'} noreferrer='true'>ifernandeznv@gmail.com</Link>
+            <Link className='text-white font-semibold' data-cypress='correo' href='mailto: ifernandeznv@gmail.com' target={'_blank'} noreferrer='true'>ifernandeznv@gmail.com</Link>
           </div>
 
           <div className='flex gap-3 items-center'>

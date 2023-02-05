@@ -3,8 +3,8 @@ import Footer from './Footer'
 import '../styles/globals.css';
 
 describe('<Footer />', () => {
-  it('renders', () => {
+  it('Primeros pasos con Component Testing', () => {
     cy.mount(<Footer />)
-    cy.get('a').should('have.a.property', 'href', 'tel: +52 6271328212')
+    cy.get('a[data-cypress]').should('have.text', 'ifernandeznv@gmail.com')
   })
 })
