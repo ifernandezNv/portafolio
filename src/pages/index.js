@@ -154,11 +154,11 @@ export default function Home() {
                         </Link>
                       </div>
 
-                      <div className='flex flex-col md:flex-row gap-12 mt-14'>
+                      <nav className='flex flex-col md:flex-row gap-12 mt-14'>
                           <Link href='#proyectos' className='text-center text-white text-movil-xl md:text-sm shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:text-black hover:border-span hover:border-b-4 transition-all' data-cypress='proyectos' >Ver Proyectos</Link>
                           <a href="/assets/Isaac Fernández Navarro.pdf" download data-cypress='cv' className='text-black text-movil-xl md:text-sm px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white hover:border-white hover:border-b-4  transition-all'>Descargar CV</a>
                           <Link href='#about' data-cypress='aboutme' className='text-black text-movil-xl md:text-sm px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white hover:border-white hover:border-b-4  transition-all' >Conóceme Más</Link>
-                        </div>
+                        </nav>
                     </div>
 
                     <div className={`absolute z-50 bottom-10 right-10 rounded md:hidden`}>
@@ -171,12 +171,13 @@ export default function Home() {
               <main className='min-h-screen bg-azul-oscuro py-10 px-4 md:px-20 ' id='proyectos'>
                 <h2 className='text-movil-2xl md:text-2xl text-white font-heading font-bold text-center' data-cypress='headingproyectos'>Mis Proyectos</h2>
                 <div>
-                  <p className='font-poppins font-medium text-sm text-gris-claro mt-5 lg:mt-9'>Categorías:</p>
+                  <p className='font-poppins font-medium text-sm text-gris-claro mt-5 lg:mt-9' data-cypress='categorias'>Categorías:</p>
                   <div className='flex flex-row justify-between items-center my-4'>
-                    <button className={` ${filtro === 'todos' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} text-movil-lg md:text-sm lg:text-md py-2 px-5 rounded transition-all lg:w-1/6`} onClick={ ()=> setFiltro('todos') }>Todos</button>
-                    <button className={` ${filtro === 'web' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} text-movil-lg md:text-sm lg:text-md py-2 px-5 rounded transition-all lg:w-1/6`} onClick={ ()=> setFiltro('web') }>Web</button>
-                    <button className={` ${filtro === 'movil' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} text-movil-lg md:text-sm lg:text-md py-2 px-5 rounded transition-all lg:w-1/6`} onClick={ ()=> setFiltro('movil') }>Móvil</button>
-                    <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} text-movil-lg md:text-sm lg:text-md py-2 px-5 rounded transition-all lg:w-1/6`} onClick={ ()=> setFiltro('design') }>Diseño</button>
+                    <button className={` ${filtro === 'todos' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} text-movil-lg md:text-sm lg:text-md py-2 px-5 rounded transition-all lg:w-1/6`} onClick={ ()=> setFiltro('todos') }
+                    data-cypress='todos'>Todos</button>
+                    <button className={` ${filtro === 'web' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} text-movil-lg md:text-sm lg:text-md py-2 px-5 rounded transition-all lg:w-1/6`} onClick={ ()=> setFiltro('web') } data-cypress='web'>Web</button>
+                    <button className={` ${filtro === 'movil' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} text-movil-lg md:text-sm lg:text-md py-2 px-5 rounded transition-all lg:w-1/6`} onClick={ ()=> setFiltro('movil') } data-cypress='movil'>Móvil</button>
+                    <button className={` ${filtro === 'design' ? 'bg-span text-white font-bold shadow hover:bg-white hover:text-black hover:border-span hover:border-b-4' : 'text-black bg-white border-span border-b-2 hover:bg-span hover:font-bold hover:text-white font-semibold'} text-movil-lg md:text-sm lg:text-md py-2 px-5 rounded transition-all lg:w-1/6`} onClick={ ()=> setFiltro('design') } data-cypress='design'>Diseño</button>
                   </div>
                 </div>
                 <div className='mx-4 grid lg:grid-cols-2 md:gap-5 lg:gap-x-7 gap-y-5 lg:gap-y-9 mt-9 lg:mt-16 lg:mx-24 transition-all'>
