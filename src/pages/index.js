@@ -155,9 +155,9 @@ export default function Home() {
                       </div>
 
                       <div className='flex flex-col md:flex-row gap-12 mt-14'>
-                          <Link href='#proyectos' className='text-center text-white text-movil-xl md:text-sm shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:text-black hover:border-span hover:border-b-4 transition-all' >Ver Proyectos</Link>
-                          <a href="/assets/Isaac Fernández Navarro.pdf" download className='text-black text-movil-xl md:text-sm px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white hover:border-white hover:border-b-4  transition-all'>Descargar CV</a>
-                          <Link href='#about' className='text-black text-movil-xl md:text-sm px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white hover:border-white hover:border-b-4  transition-all' >Conóceme Más</Link>
+                          <Link href='#proyectos' className='text-center text-white text-movil-xl md:text-sm shadow font-semibold px-10 py-4 bg-bgAzul rounded hover:bg-white hover:text-black hover:border-span hover:border-b-4 transition-all' data-cypress='proyectos' >Ver Proyectos</Link>
+                          <a href="/assets/Isaac Fernández Navarro.pdf" download data-cypress='cv' className='text-black text-movil-xl md:text-sm px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white hover:border-white hover:border-b-4  transition-all'>Descargar CV</a>
+                          <Link href='#about' data-cypress='aboutme' className='text-black text-movil-xl md:text-sm px-10 py-4 font-semibold rounded bg-white hover:bg-bgAzul hover:text-white hover:border-white hover:border-b-4  transition-all' >Conóceme Más</Link>
                         </div>
                     </div>
 
@@ -169,7 +169,7 @@ export default function Home() {
               </header>
 
               <main className='min-h-screen bg-azul-oscuro py-10 px-4 md:px-20 ' id='proyectos'>
-                <h2 className='text-movil-2xl md:text-2xl text-white font-heading font-bold text-center'>Mis Proyectos</h2>
+                <h2 className='text-movil-2xl md:text-2xl text-white font-heading font-bold text-center' data-cypress='headingproyectos'>Mis Proyectos</h2>
                 <div>
                   <p className='font-poppins font-medium text-sm text-gris-claro mt-5 lg:mt-9'>Categorías:</p>
                   <div className='flex flex-row justify-between items-center my-4'>
