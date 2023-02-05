@@ -137,7 +137,7 @@ export default function Home() {
                     />
                     <div className='flex flex-col items-center justify-center absolute -top-28 z-10 w-full min-h-screen mt-20' >
                       <h1 className='text-white text-center text-movil-2xl md:text-2xl lg:text-4xl font-bold lg:tracking-wider'>Hola, Soy Isaac Fernández</h1>
-                      <h2 className='text-movil-xl md:text-xl lg:text-2xl font-bold mt-16 text-white'>Desarrollador <span className='text-span'>Front-End</span></h2>
+                      <h2 className='text-movil-xl md:text-xl lg:text-2xl font-bold mt-16 text-white' data-cypress='profesion'>Desarrollador <span className='text-span'>Front-End</span></h2>
                       
                       <p className='text-white text-center text-movil-xl md:text-md lg:text-lg font-bold mt-10'>Conoce un poco más acerca de mí</p>
                       <p className='text-white text-center text-movil-xl md:text-md lg:text-lg font-bold'>y mira mis proyectos más destacables</p>
