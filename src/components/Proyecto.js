@@ -18,7 +18,7 @@ function Proyecto({proyecto}) {
           />
           <div className='px-2 py-2 md:px-4 md:py-4'>
             <div>
-              <h3 className='font-bold text-movil-xl lg:text-lg' data-cypress={titulo}>{titulo}</h3>
+              <h3 className='font-bold text-movil-xl lg:text-lg' data-cypress={'headingProyecto'}>{titulo}</h3>
               <p className='text-movil-lg font-light lg:text-sm'>Stack Utilizado: </p>
               <div className='my-1 md:my-2 lg:my-3 grid grid-cols-2 gap-1 lg:ml-3'>
                 {stack?.map(tecnologia => <Tecnologia tecnologia={tecnologia} key={tecnologia.nombre}/>)}

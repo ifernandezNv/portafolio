@@ -40,7 +40,7 @@ describe('Testing a la página principal', () => {
     cy.get('[data-cypress=cmovil]').should('not.have.text', 'UpTask')
     cy.get('[data-cypress=cmovil]')
       .click()
-      .get('h3[data-cypress=Áureos]').should('have.text', 'Áureos')
+      .get('h3[data-cypress=headingProyecto]').should('have.text', 'Áureos')
     
     cy.get('[data-cypress=cmovil]').should('have.lengthOf', 1)
   })
@@ -51,7 +51,11 @@ describe('Testing a la página principal', () => {
     cy.get('[data-cypress=design]').should('have.text', 'Diseño').click()
 
     cy.get('[data-cypress=cdesign]').should('not.have.text', 'UpTask')
-    
-    cy.get('[data-cypress=cdesign]').should('have.lengthOf', 2)
+
+    cy.get('[data-cypress=design]').should('have.text', 'Diseño')
+      .click()
+      .get('[data-cypress=cdesign]')
+      .should('have.lengthOf', 2)
+      .get('div:first').get('[data-cypress=headingProyecto]:first').should('have.text', 'Diseño UI de mi Portafolio')
   })
 })
