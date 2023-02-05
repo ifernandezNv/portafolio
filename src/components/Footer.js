@@ -21,8 +21,8 @@ function Footer() {
             <Link className='text-white font-semibold' href='/' target={'_blank'} noreferrer='true'>LinkedIn</Link>
           </div>
         </div>
-        <p className='text-white font-bold'>Todos los derechos reservados. &copy; {new Date().getFullYear()}</p>
-        <p className='text-white font-bold'>Isaac Fernández Navarro</p>
+        <p className='text-white font-bold' data-cypress='copyright'>Todos los derechos reservados. &copy; {new Date().getFullYear()}</p>
+        <p className='text-white font-bold' data-cypress='nombre'>Isaac Fernández Navarro</p>
     </footer>
   )
 }
