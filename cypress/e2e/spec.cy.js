@@ -1,9 +1,9 @@
 describe('Testing a mi portafolio', () => {
   it('Visitando el index', () => {
-    cy.visit('http://localhost:3000')
+    cy.visit('/')
   })
   it('Interactuando con la navegación', ()=>{
-    cy.visit('http://localhost:3000')
+    cy.visit('/')
     cy.contains('proyectos').click()
   })
 })
